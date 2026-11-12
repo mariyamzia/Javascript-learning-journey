@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 25px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 100px;
+            border: 2px solid black;
+
+        }
+        button{
+            margin-top: 100px;
+            margin-left: 40%;
+            padding: 15px;
+            font-size: 1.2rem;
+            border: none;
+            background-color: lightblue;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    5 boxes and give random colors and background to each box. 
+     -->
+
+    <div class="container">
+        <div class="box" id="box1">Hey! This is Box 1</div>
+        <div class="box" id="box2">Hey! This is Box 2</div>
+        <div class="box" id="box3">Hey! This is Box 3</div>
+        <div class="box" id="box4">Hey! This is Box 4</div>
+        <div class="box" id="box5">Hey! This is Box 5</div>
+    </div>
+    <button class="btn">Randomize All!</button>
+    <script src="script.js"></script>
+</body>
+
+</html>

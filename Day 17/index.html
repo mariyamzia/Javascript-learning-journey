@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container black green woo">
+        <div class="box" style="color: pink;" data-createdby="Mariyam">This is a box</div>
+        <div class="box">This is a 2nd box</div>
+    </div>
+<div id="hide" hidden>I amd hidden</div>
+    <script>
+        // console.log(document.querySelector(".container").innerText);
+        // console.log(document.querySelector(".container").outerHTML);
+        // console.log(document.querySelector(".container").innerHTML);
+        // console.log(document.querySelector(".container").innerText);
+        // console.log(document.querySelector(".box").innerText);
+        // console.log(document.querySelector(".box").tagName);
+        // console.log(document.querySelector(".box").nodeName);
+        // console.log(document.querySelector(".container").textContent);
+        // console.log(document.querySelector(".container").hidden);
+        // console.log(document.querySelector("#hide").hidden);
+        // console.log(document.querySelector(".box").innerHTML = "Hey I am Mariyam");
+        // console.log(document.querySelector(".box").textContent = "Hey I am no Mariyam");
+        // console.log(document.querySelector(".box").hasAttribute("style"));
+        // console.log(document.querySelector(".box").getAttribute("style"));
+        // console.log(document.querySelector(".box").setAttribute("style", "display: flex;"));
+        // console.log(document.querySelector(".box").removeAttribute("style"));
+        // console.log(document.querySelector(".box").attributes);
+        // console.log(document.querySelector(".box").dataset);
+        // console.log(document.designMode = "on");
+
+        // Insertng elements;
+        
+        let div = document.createElement("div");
+        div.className = "me";
+        div.setAttribute("style", "color: blue;")
+        div.innerHTML = "I love coding";
+        // document.querySelector(".container").prepend(div);
+        // document.querySelector(".container").before(div);
+        // document.querySelector(".container").after(div);
+        document.querySelector(".container").append(div);
+        let heading = document.createElement("h1");
+        heading.textContent = "Welcome!"
+        // document.querySelector(".container").before(heading);
+        // document.querySelector(".container").prepend(heading);
+        document.querySelector(".container").before(heading);
+
+        let count =  document.querySelector(".container");
+        count.insertAdjacentHTML("beforeend", "<b> I am Mariyam web dev </b>");
+        console.log(document.getElementsByClassName("container")[0]);
+        console.log(document.querySelector(".container").classList.add("add"));
+        console.log(document.querySelector(".container").classList.replace("woo","sam"));
+        console.log(document.querySelector(".container").className);
+
+    </script>
+</body>
+</html>

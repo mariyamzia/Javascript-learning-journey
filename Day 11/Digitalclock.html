@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM + DOM Clock</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #clock {
+            font-size: 4rem;
+            color: #00ffcc;
+            background-color: #333;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. THE DOM ELEMENT: The container where our time will live -->
+    <div id="clock">00:00:00</div>
+
+    <script>
+        // 2. THE DOM TARGET: Grab the clock element so we can change its text
+        const clockElement = document.querySelector("#clock");
+
+        function updateClock() {
+            // Get the current date and time from the computer
+            const now = new Date();
+            
+            // Format it into a clean time string (HH:MM:SS)
+            const timeString = now.toLocaleTimeString();
+            
+            // THE DOM ACTION: Update the element's text content
+            clockElement.textContent = timeString;
+        }
+
+        // Run the function once immediately so the clock doesn't show 00:00:00 at the start
+        updateClock();
+
+        // 3. THE BOM TIMER: Tell the browser window to run our function every 1000ms (1 second)
+        window.setInterval(updateClock, 1000);
+    </script>
+
+</body>
+</html>

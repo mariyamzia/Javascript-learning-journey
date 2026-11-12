@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        #my-btn {
+            padding: 15px 10px;
+            background-color: cyan;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="my-btn">Click Me</button>
+
+    <script>
+        const button = document.getElementById("my-btn");
+
+        button.addEventListener("click", () => {
+            // Fix: Use === to check the text, not just one =
+            if (button.textContent === "Click Me") {
+                button.textContent = "Who said click me??!";
+                button.style.backgroundColor = "lightgreen";
+            }
+            else {
+                button.textContent = "Click Me";
+                button.style.backgroundColor = "cyan"; // Note: Since the initial color is default/gray, this will change it to cyan on the second click!
+            }
+        });
+
+        document.title = "My Website";
+        console.log(document.body);
+        document.body.style.backgroundColor = "pink";
+    </script>
+</body>
+
+</html>
+
